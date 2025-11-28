@@ -8,8 +8,8 @@
 #import "flutter_system_proxy-Swift.h"
 #endif
 
-@implementation FlutterProxyPlugin
+@implementation FlutterProxyPlugin : NSObject
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
-  [SwiftFlutterPlugin registerWithRegistrar:registrar];
+  [SwiftFlutterProxyPlugin registerWithRegistrar:registrar];
 }
 @end
