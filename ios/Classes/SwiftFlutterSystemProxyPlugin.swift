@@ -106,11 +106,11 @@ public class SwiftFlutterProxyPlugin: NSObject, FlutterPlugin {
                         dict["port"] = port
                         let url = client.assumingMemoryBound(to: String.self).pointee
                         SwiftFlutterProxyPlugin.proxyCache[url] = dict
-                    }     
+                    }
                 }
             }
                 CFRunLoopStop(CFRunLoopGetCurrent());
-            }, &context).takeUnretainedValue()
+            }, &context)
             let runLoop = CFRunLoopGetCurrent();
             CFRunLoopAddSource(runLoop, runLoopSource, CFRunLoopMode.defaultMode);
             CFRunLoopRun();

@@ -1,4 +1,4 @@
-#import "FlutterPlugin.h"
+#import <Flutter/Flutter.h>
 #if __has_include(<flutter_system_proxy/flutter_system_proxy-Swift.h>)
 #import <flutter_system_proxy/flutter_system_proxy-Swift.h>
 #else
